@@ -1,0 +1,18 @@
+{
+  "locations": {
+    "location1": {
+       "location": "Fire Department, BOI Awissawella",
+      "description": "ravi@androidhive.info",
+      "mobile": "+94112714444",
+	  "longitude": "79.8783367",
+      "latitude": "6.7995949"
+    },
+    "location2": {
+         "location": "Fire Department - Kotte",
+      "description": "ravi@androidhive.info",
+      "mobile": "+94112879444",
+	  "longitude": "79.8524375",
+      "latitude": "6.9202981"
+    }
+  }
+}

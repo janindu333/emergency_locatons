@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "588399245485",
+    "firebase_url": "https://videocall-36ccf-default-rtdb.firebaseio.com",
+    "project_id": "videocall-36ccf",
+    "storage_bucket": "videocall-36ccf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588399245485:android:22e27ee290ca7fd2e36e24",
+        "android_client_info": {
+          "package_name": "info.androidhive.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588399245485-gamfs894e8035uc8vg9avar2bgp07t8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMNcb7ye0K9nHvVovWvK5vvY34euPY9G8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588399245485-gamfs894e8035uc8vg9avar2bgp07t8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

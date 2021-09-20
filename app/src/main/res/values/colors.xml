@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#20242F</color>
+
+    <color name="colorCenter">#2288CF</color>
+    <color name="colorStart">#546ACC</color>
+    <color name="colorEnd">#25A4CC</color>
+    <color name="colorPrimaryDark">#161920</color>
+    <color name="colorAccent">#E6F111</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#838383</color>
+    <color name="colorDarkGray">#3F3F3F</color>
+    <color name="colorLightGray">#D9D9D9</color>
+    <color name="colorExtraLightGray">#BCB9B9</color>
+    <color name="colorMediumGray">#B1B1B2</color>
+    <color name="colorGray95Opacity">#F2161827</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="colorPrimaryBlue">#20242F</color>
+    <color name="colorPrimaryYellow">#E1DD00</color>
+    <color name="colorLightYellow">#f4ff16</color>
+    <color name="colorBlue">#4580C2</color>
+    <color name="colorLightBlue">#58A5FB</color>
+    <color name="colorLightBlue95Opacity">#4058A5FB</color>
+    <color name="colorLightBlue50Opacity">#8058A5FB</color>
+    <color name="colorBalanceTableBlue">#161827</color>
+    <color name="colorBottomNavigation">#20242F</color>
+    <color name="colorLocationRowBackground">#252936</color>
+    <color name="colorBackground">#191C26</color>
+    <color name="colorLeafGreen">#AFE100</color>
+    <color name="colorStatusGreen">#74c218</color>
+    <color name="colorBatteryFullGreen">#47EC20</color>
+    <color name="colorBatteryError">#C0392B</color>
+    <color name="colorCritical">#F95E5E</color>
+    <color name="colorVerify">#80D51E</color>
+    <color name="colorBackgroundCard">#2CD1D1D1</color>
+
+    <integer-array name="google_glyph_colors">
+        <item>@android:color/white</item>
+        <item>@color/colorLightBlue</item>
+        <item>@color/colorLightBlue</item>
+        <item>@color/colorLightBlue</item>
+    </integer-array>
+</resources>

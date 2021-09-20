@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendVideo">
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        android:layout_alignParentTop="true"
+        ads:adUnitId="ca-app-pub-7168390928112517/6024206858">
+    </com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:layout_margin="5dp"
+            android:hint="video url"
+            android:id="@+id/video_url"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:background="@android:color/holo_red_light"
+            android:layout_margin="15dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:onClick="Add Video"
+            android:id="@+id/add_video_btn"
+            android:text="Add Video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom_navigation"
+        app:itemIconTint="@drawable/navigation_item_color"
+        app:itemTextColor="@drawable/navigation_item_color"
+        app:menu="@menu/navigation_menu_items" />
+
+</RelativeLayout>

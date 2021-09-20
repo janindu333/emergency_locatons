@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/content_main"/>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingStart="@dimen/fab_padding_right"
+        android:paddingLeft="@dimen/fab_padding_right"
+        android:paddingEnd="@dimen/fab_padding_right"
+        android:paddingRight="@dimen/fab_padding_right"
+        android:paddingBottom="@dimen/fab_padding_bottom"
+        fab:menu_icon="@android:drawable/ic_dialog_dialer"
+        fab:menu_backgroundColor="@color/colorLightBlue50Opacity"
+        fab:menu_colorNormal="@color/colorBlue"
+        fab:menu_colorPressed="@color/colorLightBlue"
+        fab:fab_colorRipple="#99FFFFFF"
+        fab:fab_showShadow="true"
+        fab:menu_labels_colorNormal="@color/colorPrimary"
+        fab:menu_labels_colorPressed="#444444"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_textColor="@color/colorWhite"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_position="left"
+        fab:menu_openDirection="up"
+        fab:fab_shadowColor="#66000000"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_profile"
+            fab:fab_colorNormal="@color/colorBlue"
+            fab:fab_colorPressed="@color/colorLightBlue"
+            fab:fab_label="@string/fab_logout"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
