@@ -27,8 +27,9 @@ import butterknife.ButterKnife;
 import info.androidhive.firebase.Adapter.LocationListRecyclerAdapter;
 import info.androidhive.firebase.R;
 import info.androidhive.firebase.dto.EmergencyLocation;
+import info.androidhive.firebase.ui.util.CallClickListener;
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements CallClickListener {
 
     public boolean shouldShowBalance;
     private LocationListRecyclerAdapter locationListRecyclerAdapter;
@@ -149,5 +150,12 @@ public class HomeFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
 
+    }
+
+    @Override
+    public void onItemClick(String mobile) {
+        if(mainActivity != null && isAdded()){
+            mainActivity.call(mobile);
+        }
     }
 }

@@ -122,5 +122,7 @@
     <string name="txt_locations">locations</string>
     <string name="fab_logout">log out</string>
 
-
+    <string name="call_service_alert_title">Turn On Phone Service </string>
+    <string name="call_service_alert_message">This will make it easier for you to contact with selected charging point. Please go Apps > Lookouteye > Permissions and enable Phone.</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.github.clans.fab.FloatingActionMenu;
@@ -22,6 +23,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
@@ -70,6 +72,7 @@ import info.androidhive.firebase.ui.fragment.HomeFragment;
 import info.androidhive.firebase.ui.util.IOnCompletionListener;
 import info.androidhive.firebase.ui.util.VideoCallAlert;
 import info.androidhive.firebase.ui.util.VideoCallAnimator;
+import info.androidhive.firebase.ui.util.VideoCallValidator;
 import lombok.Getter;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener,
@@ -92,6 +95,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public GoogleMapFragment googleMapFragment;
     protected LocationManager locationManager;
     private IOnCompletionListener listener;
+    private String phoneNumber;
 
     private boolean isLocationAlertShown;
     private boolean didRequestGoogleLocationPermission;
@@ -425,6 +429,31 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
 
     public void clearUserData() {
         preferences.edit().clear().apply();
+    }
+
+    public void call(final String number) {
+        if (number != null) {
+            if (!VideoCallValidator.getInstance().isValidPhoneNumber(number)) {
+                VideoCallAlert.show(MainActivity.this, getString(R.string.warning),
+                        getString(R.string.invalid_phone_number));
+            } else {
+                phoneNumber = number;
+                if (ActivityCompat.checkSelfPermission(MainActivity.this,
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    VideoCallAlert.show(MainActivity.this, getString(R.string.call_service_alert_title),
+                            getString(R.string.call_service_alert_message),
+                            getString(R.string.settings),
+                            getString(R.string.cancel), (dialog, which) -> {
+                                dialog.dismiss();
+                                Intent intent = new Intent(Settings.ACTION_SETTINGS);
+                                startActivity(intent);
+                            }, (dialog, which) -> dialog.dismiss());
+                } else {
+                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + number));
+                    startActivity(intent);
+                }
+            }
+        }
     }
 
     @Override

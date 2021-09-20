@@ -27,12 +27,14 @@ import info.androidhive.firebase.MainActivity;
 import info.androidhive.firebase.R;
 import info.androidhive.firebase.dto.EmergencyLocation;
 import info.androidhive.firebase.ui.fragment.HomeFragment;
+import info.androidhive.firebase.ui.util.CallClickListener;
 import lombok.Setter;
 
 public class LocationListRecyclerAdapter
         extends BaseRecyclerAdapter<LocationListRecyclerAdapter.LocationViewHolder> {
 
     private HomeFragment parentFragment;
+    private CallClickListener callClickListener;
 
     @Setter
     private List<EmergencyLocation> rowList;
@@ -60,6 +62,7 @@ public class LocationListRecyclerAdapter
         this.rowList = rowList;
         this.mContext = context;
         this.parentFragment = homeFragment;
+        this.callClickListener = homeFragment;
     }
 
     @Override
@@ -94,9 +97,11 @@ public class LocationListRecyclerAdapter
 
         tmpHolder.call.setOnClickListener(v -> {
 
-            Intent intent = new Intent(Intent.ACTION_CALL,
-                    Uri.parse("tel:"+ rowData.getMobile()));
-            ((MainActivity)mContext).startActivity(intent);
+            callClickListener.onItemClick(rowData.getMobile());
+
+//            Intent intent = new Intent(Intent.ACTION_CALL,
+//                    Uri.parse("tel:"+ rowData.getMobile()));
+//            ((MainActivity)mContext).startActivity(intent);
         });
 
     }
